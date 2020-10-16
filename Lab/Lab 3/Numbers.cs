@@ -73,6 +73,28 @@ namespace Lab_3
         {
             Console.WriteLine($"Количество экземпляров класса равно {quant};");
         }
+        //СУММА ЭЛЕМЕНТОВ КЛАССА
+        public int sum()
+        {
+            int sum = 0;
+            foreach (var item in numb)
+                sum += item;
+            return sum;
+        }
+        //ПРОВЕРКА НА СОДЕРЖАНИЕ ОТРИЦАТЕЛЬНЫХ ЭЛЕМЕНТОВ
+        public bool minus()
+        {
+            bool check = false;
+            foreach (var item in numb)
+            {
+                if(item<0)
+                {
+                    check = true;
+                    return check;
+                }
+            }
+            return check;
+        }
         //переопределение метода класса Object.Equals()
         public override bool Equals(object obj)
         {
