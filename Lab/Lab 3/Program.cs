@@ -58,6 +58,10 @@ namespace Lab_3
             foreach (var item in minus_obj)
                 if (item >= 0) Console.Write(item + " ");
             Console.WriteLine();
+
+            //Анонимный объект
+            var anon = new { list = (9, -10, 34, 176, -21), id = 6743819, quant = 5 };
+            Console.WriteLine($"\nАнонимный тип : {anon.list}\t{anon.id}\t{anon.quant}\n");
         }
     }    
 }
