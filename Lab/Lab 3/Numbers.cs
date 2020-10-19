@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,14 @@ namespace Lab_3
             ID = numb.GetHashCode();
         }
 
+        //закрытый конструктор
+        private Numbers(int n = 1, int m = 2)
+        {
+            numb.Add(n);
+            numb.Add(m);
+            ID = numb.GetHashCode();
+        }
+
         //конструктор СТАТИЧЕСКИЙ
         static Numbers()
         {
@@ -63,7 +72,7 @@ namespace Lab_3
         //ВЫВЕСТИ МНОЖЕСТВО НА КОНСОЛЬ
         public void show()
         {
-            Console.Write("\nЭлементы множества:\n");
+            Console.Write("Элементы множества:\n");
             foreach (var item in numb)
                 Console.Write(item + "\t");
             Console.WriteLine("\n");

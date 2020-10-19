@@ -13,23 +13,30 @@ namespace Lab_3
         {
             //использование конструктора без параметров
             Numbers first = new Numbers();
+            Console.WriteLine("Множество first (исходная версия)");
             first.add_el(12);
             first.add_el(23);
             first.show();
+            Console.WriteLine("Множество first (после удаления одного из элементов)");
             first.del_el(1);
             first.show();
+            Console.WriteLine("Множество first (размер множества)");
             first.size();
             //использование конструктора с параметрами
             int[] arr = new int[] {1,-2,3,-4,5};
             Numbers second = new Numbers(arr);
+            Console.WriteLine("Множество second (исходная версия)");
             second.show();
             //использование конструктора по умолчанию
             Numbers third = new Numbers(3);
+            Console.WriteLine("Множество third (исходная версия)");
             third.show();
             Numbers.quantity();
-            if (first.Equals(third)) Console.WriteLine("yes");
-            else Console.WriteLine("no");
+            if (first.Equals(third)) Console.WriteLine("first equals third");
+            else Console.WriteLine("first DOES NOT equal third");
+            Console.WriteLine("Множество second (second.GetHashCode)");
             Console.WriteLine(second.GetHashCode());
+            Console.WriteLine("Множество first (first.ToString)");
             Console.WriteLine(first.ToString());
 
             //создание массива объектов
